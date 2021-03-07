@@ -24,6 +24,14 @@ io.on("connection", socket => {
     socket.on("offer", payload => {
         io.to(payload.target).emit("offer", payload);
     });
+
+    socket.on("answer", payload => {
+        io.to(payload.target).emit("answer", payload);
+    });
+
+    socket.on("ice-candidate", incoming => {
+        io.to(incoming.target).emit("answer", payload);
+    });
 });
 
 
