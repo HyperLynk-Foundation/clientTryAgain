@@ -20,6 +20,10 @@ io.on("connection", socket => {
             socket.to(otherUser).emit("user joined", socket.id);
         }
     });
+
+    socket.on("offer", payload => {
+        io.to(payload.target).emit("offer", payload);
+    });
 });
 
 
