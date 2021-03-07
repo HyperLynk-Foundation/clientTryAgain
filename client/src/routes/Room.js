@@ -13,6 +13,24 @@ const Room = (props) => {
         navigator.mediaDevices.getUserMedia({audio: true, video: true }).then(stream => {
             userVideo.current.srcObject = stream;
             userStream.current = stream;
+
+            socketRef.current = io.connect("/");
+            socketRef.current.emit("join room", props.match.params.roomID);
+
+            socketRef.current.on("other user", userID => {
+                callUser(userID);
+                otherUser.current = userID;
+            });
+
+            socketRef.current.on("user joined", userID => {
+                otherUser.current = userID;
+            });
+
+            socketRef.current.on("offer", handleRecieveCall);
+
+            socketRef.current.on("answer", handleAnswer);
+
+            socketRef.cuurent.on("ice-candidate", handleNewICECandidateMsg);
         });
     }, []);
 
