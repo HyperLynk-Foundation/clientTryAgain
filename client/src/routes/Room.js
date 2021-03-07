@@ -9,15 +9,15 @@ const Room = (props) => {
     const otherUser = useRef();
     const userStream = useRef();
 
-    useEffect( () => {
-        navigator.mediaDevices.getUserMedia({audio: true, video: true }).then(stream => {
+    useEffect(() => {
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
             userVideo.current.srcObject = stream;
             userStream.current = stream;
 
             socketRef.current = io.connect("/");
             socketRef.current.emit("join room", props.match.params.roomID);
 
-            socketRef.current.on("other user", userID => {
+            socketRef.current.on('other user', userID => {
                 callUser(userID);
                 otherUser.current = userID;
             });
@@ -30,8 +30,9 @@ const Room = (props) => {
 
             socketRef.current.on("answer", handleAnswer);
 
-            socketRef.cuurent.on("ice-candidate", handleNewICECandidateMsg);
+            socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
         });
+
     }, []);
 
     function callUser(userID) {
@@ -91,7 +92,6 @@ const Room = (props) => {
             socketRef.current.emit("answer", payload);
         })
     }
-
 
     function handleAnswer(message) {
         const desc = new RTCSessionDescription(message.sdp);

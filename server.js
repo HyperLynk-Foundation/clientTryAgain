@@ -30,10 +30,9 @@ io.on("connection", socket => {
     });
 
     socket.on("ice-candidate", incoming => {
-        io.to(incoming.target).emit("answer", payload);
+        io.to(incoming.target).emit("ice-candidate", incoming.candidate);
     });
 });
 
 
-
-server.listen(8888, () => console.log('server is running on port 8888'));
+server.listen(8000, () => console.log('server is running on port 8000'));
