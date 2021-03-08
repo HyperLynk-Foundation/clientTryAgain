@@ -130,11 +130,23 @@ const Room = (props) => {
         })
     }
 
+    function endCall() {
+        window.location.replace("https://hyperlynk.herokuapp.com/");
+    }
+
     return (
         <div>
-            <video style={{height: 500, width: 500}} autoPlay ref={userVideo} />
-            <video controls style={{height: 500, width: 500}} autoPlay ref={partnerVideo} />
+        <div className={"navbar"}>
             <button onClick={shareScreen}>Share Screen</button>
+            <button onClick={shareScreen} id={"copyButton"} >Copy Link</button>
+            <button onClick={endCall} id={"buttonexit"} >End Call</button>
+            <button onClick={shareScreen}>About this site</button>
+            <input type={"text"} id={"myInput"} placeholder={"Copied Text"} />
+        </div>
+        <div className={"main"}>
+            <video width={1720} height={880} id={"localVideo"} autoPlay ref={userVideo} />
+            <video width={1720} height={880} id={"remoteVideo"} autoPlay ref={partnerVideo} />
+        </div>
         </div>
     );
 };

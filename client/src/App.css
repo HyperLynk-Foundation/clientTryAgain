@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(88, 88, 88);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar button {
+  border: none;
+  float: left;
+  display: block;
+  background-color: #000000;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar button:hover {
+  background-color: rgb(66, 66, 66);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  padding: 16px;
+}
+
+#remoteVideo{
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1900px;
+    height: 800px;
+}
+
+#localVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 16px;
+    border-radius: 16px;
+    max-width: 20%;
+    max-height: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+#myInput{
+    float: left;
+    display: block;
+    background-color: rgb(214, 214, 214);
+    border: none;
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 17px;
+    margin: 20px;
 }
