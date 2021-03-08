@@ -134,17 +134,25 @@ const Room = (props) => {
         window.location.replace("https://hyperlynk.herokuapp.com/");
     }
 
+    function getUrlFromClipboard() {
+        var Url = document.getElementById("myInput");
+        Url.value = window.location.href;
+        Url.focus();
+        Url.select();  
+        document.execCommand("Copy");
+    } 
+
     return (
         <div>
         <div className={"navbar"}>
             <button onClick={shareScreen}>Share Screen</button>
-            <button onClick={shareScreen} id={"copyButton"} >Copy Link</button>
+            <button onClick={getUrlFromClipboard} id={"copyButton"} >Copy Link</button>
             <button onClick={endCall} id={"buttonexit"} >End Call</button>
             <button onClick={shareScreen}>About this site</button>
             <input type={"text"} id={"myInput"} placeholder={"Copied Text"} />
         </div>
         <div className={"main"}>
-            <video width={1720} height={880} id={"localVideo"} autoPlay ref={userVideo} />
+            <video width={1720} height={880} id={"localVideo"} autoPlay ref={userVideo} muted/>
             <video width={1720} height={880} id={"remoteVideo"} autoPlay ref={partnerVideo} />
         </div>
         </div>
