@@ -145,7 +145,7 @@ const Room = (props) => {
     return (
         <div>
         <div className={"navbar"}>
-            <button onClick={shareScreen}><img src="http://cdn.onlinewebfonts.com/svg/img_70597.png"/></button>
+            <button onClick={shareScreen}>Share Screen</button>
             <button onClick={getUrlFromClipboard} id={"copyButton"} >Copy Link</button>
             <button onClick={endCall} id={"buttonexit"} >End Call</button>
             <button onClick={shareScreen}>About this site</button>
