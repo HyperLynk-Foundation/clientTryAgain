@@ -144,9 +144,8 @@ const Room = (props) => {
 
     return (
         <div>
-        <script src="https://kit.fontawesome.com/400558e531.js" crossorigin="anonymous"></script>
         <div className={"navbar"}>
-            <button onClick={shareScreen}><i class="far fa-caret-square-up"></i></button>
+            <button onClick={shareScreen}><img http://cdn.onlinewebfonts.com/svg/img_70597.png></button>
             <button onClick={getUrlFromClipboard} id={"copyButton"} >Copy Link</button>
             <button onClick={endCall} id={"buttonexit"} >End Call</button>
             <button onClick={shareScreen}>About this site</button>
