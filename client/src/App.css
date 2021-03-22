@@ -70,3 +70,29 @@ body {
     font-size: 17px;
     margin: 20px;
 }
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 900px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.button2{
+  border: none;
+  padding: 20px;
+  color: white;
+  background-color: grey;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.button2:hover{
+  cursor: pointer;
+  background-color: green;
+  transition: 0.3s;
+}

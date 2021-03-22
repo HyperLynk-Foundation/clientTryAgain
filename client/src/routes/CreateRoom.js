@@ -8,7 +8,16 @@ const CreateRoom = (props) => {
     }
 
     return (
-        <button onClick={create}>Create Room</button>
+        <div className={"container"}>
+            <div className={"header"}>
+                <img src={"logo.png"} />
+                <h1>The fast, capable and privacy-focused way to call your friends</h1>
+            </div>
+            <div className={"main2"}>
+                <p>Simply press create room to create a room</p>
+                <button onClick={create} className={"button2"}>Create Room</button>
+            </div>
+        </div>
     );
 }
 
