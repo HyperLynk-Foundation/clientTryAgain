@@ -11,5 +11,8 @@
   "scripts": {
     "start": "PROD=true node server.js",
     "postinstall": "cd ./client && yarn"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
   }
 }
