@@ -1,6 +1,8 @@
 import React from "react";
 import { v1 as uuid } from "uuid";
 
+var imageName = require('logo.png')
+
 const CreateRoom = (props) => {
     function create() {
         const id = uuid();
@@ -10,7 +12,7 @@ const CreateRoom = (props) => {
     return (
         <div className={"container"}>
             <div className={"header"}>
-                <img src={"logo.png"} />
+                <img src={imageName} />
                 <h1>The fast, capable and privacy-focused way to call your friends</h1>
             </div>
             <div className={"main2"}>
