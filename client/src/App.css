@@ -6,32 +6,32 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #ecf0f1;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  padding: 20px;
+  width: 70%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
 }
 
 .navbar button {
   border: none;
   float: left;
   display: block;
-  background-color: #000000;
-  color: white;
+  background-color: #bdc3c7;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   margin: 20px;
   border-radius: 15px;
-  transition: 0.3s;
 }
 
 .navbar button:hover {
-  background-color: rgb(66, 66, 66);
+  background-color: #95a5a6;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .main {
