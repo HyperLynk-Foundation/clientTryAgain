@@ -1,8 +1,6 @@
 import React from "react";
 import { v1 as uuid } from "uuid";
 
-import img from 'logo.png';
-
 const CreateRoom = (props) => {
     function create() {
         const id = uuid();
@@ -12,8 +10,8 @@ const CreateRoom = (props) => {
     return (
         <div className={"container"}>
             <div className={"header"}>
-                <img src={img} />
-                <h1>The fast, capable and privacy-focused way to call your friends</h1>
+                <h1>Hyperlynk Rooms</h1>
+                <h2>The fast, capable and privacy-focused way to call your friends</h2>
             </div>
             <div className={"main2"}>
                 <p>Simply press create room to create a room</p>
