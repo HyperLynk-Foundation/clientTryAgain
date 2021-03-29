@@ -1,9 +1,9 @@
 import React from "react";
 import { v1 as uuid } from "uuid";
 
-import img from './file.png';
+import img from './logo.png';
 
-var imageName = require('logo.png');
+var imageName = require(img);
 
 const CreateRoom = (props) => {
     function create() {
