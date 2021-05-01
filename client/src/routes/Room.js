@@ -131,7 +131,7 @@ const Room = (props) => {
     }
 
     function endCall() {
-        window.location.replace("https://hyperlynk.herokuapp.com/");
+        window.location.replace("/");
     }
 
     function getUrlFromClipboard() {
