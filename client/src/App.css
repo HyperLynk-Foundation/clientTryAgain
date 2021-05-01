@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #FCFCFC;
+  background-color: #ecf0f1;
 }
 
 .navbar {
@@ -9,7 +9,6 @@ body {
   background-color: #ecf0f1;
   position: fixed;
   bottom: 0;
-  width: 70%;
   margin-bottom: 20px;
   margin-left: 20px;
   border-radius: 10px;
@@ -26,7 +25,7 @@ body {
   text-decoration: none;
   font-size: 17px;
   margin: 20px;
-  border-radius: 15px;
+  border-radius: 9px;
 }
 
 .navbar button:hover {
@@ -41,8 +40,8 @@ body {
 #remoteVideo{
     background-repeat: no-repeat;
     background-position: center;
-    width: 1900px;
-    height: 800px;
+    max-width: 1900px;
+    max-height: 800px;
 }
 
 #localVideo{
@@ -50,25 +49,26 @@ body {
     top: 0;
     left: 0;
     margin: 16px;
-    border-radius: 16px;
-    max-width: 20%;
-    max-height: 20%;
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 7px;
+    max-width: 255px;
+    max-height: 195px;
     background-size: cover;
+    background-color: #ecf0f1;
+    padding: 12px;
+    background-color: #ecf0f1;
 }
 
 
 #myInput{
     float: left;
-    display: block;
-    background-color: rgb(214, 214, 214);
+    background-color: transparent;
     border: none;
     border-radius: 6px;
     padding: 14px 16px;
-    text-align: center;
     font-size: 17px;
     margin: 20px;
+    width: 0px;
+    color: transparent;
 }
 
 .container{
