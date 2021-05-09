@@ -150,6 +150,7 @@ const Room = (props) => {
             <button onClick={endCall} id={"buttonexit"} >End Call</button>
             <button onClick={shareScreen}>About this site</button>
             <input type={"text"} id={"myInput"} placeholder={"Copied Text"} />
+	    <img src="https://i.ibb.co/nr3vGdN/handshakelogo.png" alt="Handshake Logo" width="200"/>
         </div>
         <div className={"main"}>
             <video width={1720} height={880} id={"localVideo"} autoPlay ref={userVideo} muted/>
