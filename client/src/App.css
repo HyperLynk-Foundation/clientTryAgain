@@ -6,7 +6,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #fff;
+  background-color: transparent;
   position: fixed;
   bottom: 0;
   margin-bottom: 20px;
