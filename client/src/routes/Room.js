@@ -147,7 +147,7 @@ const Room = (props) => {
         <div className={"navbar"}>
             <button onClick={shareScreen}><img src="https://i.ibb.co/31DkP8W/74576.png" alt="Share Screen" width="20"/></button>
             <button onClick={getUrlFromClipboard} id={"copyButton"} ><img src="https://i.ibb.co/mRrknNY/copy-link-icon-12.png" alt="Copy Join Link" width="20"/></button>
-            <button onClick={endCall} id={"buttonexit"} >End Call</button>
+            <button onClick={endCall} id={"buttonexit"} style={"background-color:#e74c3c"}>End Call</button>
             <button onClick={shareScreen}>About this site</button>
             <input type={"text"} id={"myInput"} placeholder={"Copied Text"} />
         </div>
